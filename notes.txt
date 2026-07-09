@@ -1,0 +1,30 @@
+Time compleity :
+Three rules :O()-upper bond
+-> Always compute for the worst case .
+-> Avoid constants .
+-> Avoid lower values .
+
+theta ()-- average 
+omega () -- lower bond
+
+Space complexity:
+Auxiliary(space to store the problem) + input space (spce to store the input).
+c(auxiliary space) = a+b(input space)
+
+
+1s=10^8 TC..
+
+*****PATTERNS ----> LOOP ----> DSA******
+rules :
+-> focus on outer loop (rows)
+-> focus on the inner loop (column)
+-> always print anything inside the inner loop(*)
+-> observe the symmetric
+
+
+************************************************
+Knights problem : 
+Total = k*k(k*k-1)/2
+attack = 4*k-1*k-2
+result=Total-attack
+************************************************

@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile C++ (Debug)",
+            "type": "cppbuild",
+            "command": "E:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-Wall",
+                "-Wextra",
+                "-pedantic",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compile with debug symbols and strict warnings"
+        },
+        {
+            "label": "Run C++ Program",
+            "type": "shell",
+            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "dependsOn": ["Compile C++ (Debug)"],  // Ensures compilation before running
+            "group": {
+                "kind": "none"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "detail": "Run the compiled executable"
+        },
+        {
+            "label": "Build & Run C++",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Compile C++ (Debug)",
+                "Run C++ Program"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Compile and run in one step"
+        }
+    ]
+}
