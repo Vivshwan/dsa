@@ -150,7 +150,8 @@ void quest9(int n){ //second largest
         if (max<arr[i+1]){
             max=arr[i+1];
         }
-        else if(smax<max){
+        else if(smax<arr[i] && arr[i]!=max){
+            smax=arr[i];
             
         }
     }
