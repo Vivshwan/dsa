@@ -103,7 +103,7 @@ void quest7(int n){ //odd and even
         else {
             
             count__odd+=1;
-            odd[count__even-1]=arr[i];
+            odd[count__odd-1]=arr[i];
         }
     }
     cout<<"EVEN"<<endl;
@@ -164,6 +164,6 @@ int main(){
     freopen("output.txt", "w", stdout);
     int n;
     cin >> n;
-    quest9(n);
+    quest7(n);
     return 0;
 }
