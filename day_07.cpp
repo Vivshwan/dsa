@@ -4,6 +4,17 @@
 #include<algorithm>
 using namespace std;
 
+//XOR CONCEPT --> SAME NUMBER XOR WITH SAME NUMBER = 4^4-> 0
+int singleNumber(vector<int>& nums) {
+        int n = nums.size();
+        int result=0;
+        
+        for (int i=0 ; i<n ; i++){
+            result ^= nums[i];
+        }
+        return result;
+    }
+
 int main (){
 // int brr[3][2]={{1,2},{3,4},{5,6}};
 //     for(int i=0;i<3;i++){
@@ -101,4 +112,11 @@ if (it != vec3.end()) {
     cout << "Element not found" << endl;
 
 }
+
+cout<<"------------------------------------------------------------------------"<<endl;
+
+
+vector<int> nums = {4,1,2,1,2};
+int ans = singleNumber(nums);
+cout<<"XOR ANSWER: "<<ans<<endl;
 }
