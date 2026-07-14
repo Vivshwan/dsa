@@ -58,7 +58,7 @@ for(int i=0 ; i<vec3.size() ; i++){
 vec3.pop_back();
 cout<<"After deletion of one element from back"<<endl;
 
-
+int size=vec3.size();
 // cout<<vec3.size()<<endl;
 // cout<<vec3.capacity()<<endl;
 
@@ -66,7 +66,7 @@ cout<<"After deletion of one element from back"<<endl;
 //ASC SORT
 sort(vec3.begin(),vec3.end());
 cout<<"Sorting in ASC"<<endl;
-for(int i=0;i<vec3.size();i++){
+for(int i=0;i<size;i++){
     cout<<vec3[i]<<" ";
 
 }
@@ -74,7 +74,7 @@ cout<<endl;
 //DESC SORT
 sort(vec3.rbegin(),vec3.rend());
 cout<<"Sorting in DSC"<<endl;
-for(int i=0;i<vec3.size();i++){
+for(int i=0;i<size;i++){
     cout<<vec3[i]<<" ";
 
 }
@@ -82,7 +82,8 @@ cout<<endl;
 //REVERSE
 reverse(vec3.begin(),vec3.end());
 cout<<"Reverse"<<endl;
-for(int i=0; i<vec3.size();i++){
+
+for(int i=0; i<size;i++){
     cout<<vec3[i]<<" ";
 }
 cout<<endl;
